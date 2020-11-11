@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+
+*,html,body{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.page{
+  min-height: 100vh;
+  border: 1px solid;
+}
+.text-center{
+  text-align: center;
+}

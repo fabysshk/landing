@@ -1,0 +1,41 @@
+header{
+  background-color: #333;
+  padding: 5px;
+  box-shadow: 1px 1px 15px;
+}
+nav{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ul{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+li{
+  padding-right: 10px;
+}
+li:last-child{
+  padding-right: 0;
+}
+a{
+  color: whitesmoke;
+  padding: 5px;
+}
+a.active{
+  color: crimson;
+}
+img{
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: crimson;
+  object-fit: cover;
+}
+select{
+  border-radius: 5px;
+}

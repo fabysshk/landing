@@ -1,0 +1,39 @@
+<header>
+  <nav>
+    <a routerLink="/home" class="logo">
+      <img src="assets/header/logo.jpg" alt="cover">
+    </a>
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive="active">
+          {{ 'links.home' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/about" routerLinkActive="active">
+          {{ 'links.about' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/contacts" routerLinkActive="active">
+          {{ 'links.contacts' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/some" routerLinkActive="active">
+          {{ 'links.notFound' | translate }}
+        </a>
+      </li>
+      <li>
+        <select  #langSelect (change)="translate.use(langSelect.value)">
+          <option *ngFor="let lang of translate.getLangs()"
+                  [value]="lang"
+                  [selected]="lang === translate.currentLang"
+          >
+            {{ lang }}
+          </option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,8 @@
+{
+  "links": {
+    "home": "home",
+    "about": "about",
+    "contacts": "contacts",
+    "notFound": "not found"
+  }
+}
