@@ -1,7 +1,7 @@
 header{
-  background-color: #333;
+  background-color: var(--color-main-dark);
   padding: 5px;
-  box-shadow: 1px 1px 15px;
+  box-shadow: 1px 1px 15px var(--color-main-dark);
 }
 nav{
   width: 95%;
@@ -23,17 +23,17 @@ li:last-child{
   padding-right: 0;
 }
 a{
-  color: whitesmoke;
+  color: var(--color-main-ligth);
   padding: 5px;
 }
 a.active{
-  color: crimson;
+  color: var(--color-danger);
 }
 img{
   display: block;
   width: 25px;
   height: 25px;
-  background-color: crimson;
+  background-color: var(--color-danger);
   object-fit: cover;
 }
 select{

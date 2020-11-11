@@ -1,0 +1,6 @@
+footer{
+  padding: 5px;
+  text-align: right;
+  color: var(--color-main-ligth);
+  background-color: var(--bg-main-dark);
+}

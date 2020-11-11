@@ -6,9 +6,11 @@ import {RouterModule} from "@angular/router";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, FooterComponent, NavbarComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -22,7 +24,9 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
     })
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    NavbarComponent
   ]
 })
 export class ComponentsModule { }

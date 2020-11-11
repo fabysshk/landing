@@ -7,10 +7,11 @@ import { HomeComponent } from './home.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { ArticleComponent } from './article/article.component';
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, ArticleComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
