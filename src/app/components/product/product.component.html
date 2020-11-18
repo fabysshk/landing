@@ -1,0 +1,9 @@
+<div class="product">
+  <p>{{ "links.title" | translate }}: {{product.title}}</p>
+  <p>{{ "links.price" | translate }}: {{product.price}}$$</p>
+  <p *ngIf="isCart">{{ "links.count" | translate }}: {{product.count}}</p>
+  <p>
+    <button (click)="onAddToCart()">+</button>
+    <button (click)="onRemoveFromCart()">-</button>
+  </p>
+</div>

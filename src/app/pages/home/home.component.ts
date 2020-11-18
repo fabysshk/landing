@@ -22,9 +22,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.products$ = this.productsService.products$;
+    this.prepareRoute();
   }
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  // tslint:disable-next-line:typedef
+  prepareRoute(outlet: RouterOutlet = null) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 
 }
