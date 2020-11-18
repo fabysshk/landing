@@ -1,9 +1,21 @@
 <div class="product">
-  <p>{{ "links.title" | translate }}: {{product.title}}</p>
-  <p>{{ "links.price" | translate }}: {{product.price}}$$</p>
-  <p *ngIf="isCart">{{ "links.count" | translate }}: {{product.count}}</p>
+  <p>{{ "links.title" | translate }}: {{ product.title }}</p>
+  <p>{{ "links.price" | translate }}: {{ product.price }}$$</p>
+  <p *ngIf="isCart">{{ "links.count" | translate }}: {{ product.count }}</p>
+  <hr />
+  <div *ngFor="let item of product.additing" [class.check]="item.check">
+    <label>
+      <input type="checkbox" (input)="onChange(item)" [checked]="item.check" />
+      <div style="display: flex; justify-content: space-between">
+        <span>{{ item.title }}</span>
+        <span>{{ item.price }}$</span>
+      </div>
+    </label>
+  </div>
+  <hr />
   <p>
     <button (click)="onAddToCart()">+</button>
     <button (click)="onRemoveFromCart()">-</button>
   </p>
+  <hr />
 </div>
