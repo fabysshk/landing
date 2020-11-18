@@ -1,34 +1,45 @@
 <header>
   <nav>
     <a routerLink="/home" class="logo">
-      <img src="assets/header/logo.jpg" alt="cover">
+      <img src="assets/header/logo.jpg" alt="cover" />
     </a>
     <ul>
       <li>
         <a routerLink="/home" routerLinkActive="active">
-          {{ 'links.home' | translate }}
+          {{ "links.home" | translate }}
         </a>
       </li>
       <li>
+        <a routerLink="/cart" routerLinkActive="active">
+          {{ "links.cart" | translate }}
+        </a>
+      </li>
+      <li *ngIf="cart.products$ | async as products">
+        <button (click)="cart.toggleCart()">x</button>
+        <button>{{ products.length }}</button>
+        <button>{{ summer(products) }}$</button>
+      </li>
+      <li>
         <a routerLink="/about" routerLinkActive="active">
-          {{ 'links.about' | translate }}
+          {{ "links.about" | translate }}
         </a>
       </li>
       <li>
         <a routerLink="/contacts" routerLinkActive="active">
-          {{ 'links.contacts' | translate }}
+          {{ "links.contacts" | translate }}
         </a>
       </li>
       <li>
         <a routerLink="/some" routerLinkActive="active">
-          {{ 'links.notFound' | translate }}
+          {{ "links.notFound" | translate }}
         </a>
       </li>
       <li>
-        <select  #langSelect (change)="translate.use(langSelect.value)">
-          <option *ngFor="let lang of translate.getLangs()"
-                  [value]="lang"
-                  [selected]="lang === translate.currentLang"
+        <select #langSelect (change)="translate.use(langSelect.value)">
+          <option
+            *ngFor="let lang of translate.getLangs()"
+            [value]="lang"
+            [selected]="lang === translate.currentLang"
           >
             {{ lang }}
           </option>

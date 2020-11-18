@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {RouterOutlet} from "@angular/router";
+import {RouterOutlet} from '@angular/router';
 import {slider, transformer, fader, stepper} from './route-animations';
+import {Product, ProductsService} from '../../service/products.service';
+import {Observable} from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,10 +15,13 @@ import {slider, transformer, fader, stepper} from './route-animations';
   ]
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  public products$: Observable<Product[]>;
+  constructor(
+    private productsService: ProductsService
+  ) { }
 
   ngOnInit(): void {
+    this.products$ = this.productsService.products$;
   }
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];

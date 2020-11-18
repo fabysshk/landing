@@ -1,8 +1,7 @@
 <app-header style="grid-area: header"></app-header>
 <app-navbar style="grid-area: navbar"></app-navbar>
-<main style="grid-area: main" [@routeAnimations]="prepareRoute(outlet)" >
-  <router-outlet  #outlet="outlet"></router-outlet>
+<app-nav-cart></app-nav-cart>
+<main style="grid-area: main" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </main>
 <app-footer style="grid-area: footer"></app-footer>
-
-
