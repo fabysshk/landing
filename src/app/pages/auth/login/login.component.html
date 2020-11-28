@@ -1,0 +1,38 @@
+<section class="page">
+  <p>{{ "links.login" | translate }}</p>
+  <form>
+    <div class="form-group">
+      <label for="email">
+        {{ "links.email" | translate }}
+      </label>
+      <input type="email" id="email" required [formControl]="email" />
+      <div class="error" [class.show]="email.invalid">
+        {{ "auth.email." + getErrorMessageEmail() | translate }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">
+        {{ "links.password" | translate }}
+      </label>
+      <input
+        type="password"
+        #input
+        id="password"
+        required
+        [formControl]="password"
+      />
+      <div class="hint">{{ input.value?.length || 0 }}/10</div>
+      <div class="error" [class.show]="password.invalid">
+        {{ "auth.password." + getErrorMessagePassword() | translate }}
+      </div>
+    </div>
+    <div class="form-group">
+      <button
+        (click)="onSubmit()"
+        [disabled]="email.invalid || password.invalid"
+      >
+        {{ "links.login" | translate }}
+      </button>
+    </div>
+  </form>
+</section>

@@ -32,6 +32,19 @@ const routes: Routes = [
     data: { animation: 'isRight' },
   },
   {
+    path: 'auth',
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((m) => m.AuthModule),
+    data: { animation: 'isLeft' },
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./pages/dashboard/dashboard.module')
+        .then((m) => m.DashboardModule),
+    data: { animation: 'isRight' },
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./pages/not-found/not-found.module').then(

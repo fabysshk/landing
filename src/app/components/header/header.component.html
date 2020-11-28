@@ -15,9 +15,9 @@
         </a>
       </li>
       <li *ngIf="cart.products$ | async as products">
-        <button (click)="cart.toggleCart()">x</button>
-        <button>{{ products.length }}</button>
-        <button>{{ summer(products) }}$</button>
+        <button (click)="cart.toggleCart()">
+          x: {{ products.length }} {{ summer(products) }}$
+        </button>
       </li>
       <li>
         <a routerLink="/about" routerLinkActive="active">
@@ -34,6 +34,29 @@
           {{ "links.notFound" | translate }}
         </a>
       </li>
+
+      <ng-container *ngIf="isAuth$ | async;else auth">
+        <li>
+          <a routerLink="/dashboard" routerLinkActive="active">
+            {{ "links.dashboard" | translate }}
+          </a>
+        </li>
+        <li>
+          <button (click)="onLogOut()" class="link">
+            logout
+          </button>
+        </li>
+      </ng-container>
+      <ng-template #auth>
+        <li>
+          <a routerLink="/auth" routerLinkActive="active">
+            {{ "links.auth" | translate }}
+          </a>
+        </li>
+      </ng-template>
+
+
+
       <li>
         <select #langSelect (change)="translate.use(langSelect.value)">
           <option

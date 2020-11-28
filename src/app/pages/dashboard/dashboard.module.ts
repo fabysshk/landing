@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ContactsRoutingModule } from './contacts-routing.module';
-import { ContactsComponent } from './contacts.component';
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardComponent } from './dashboard.component';
 
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 @NgModule({
-  declarations: [ContactsComponent],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
-    ContactsRoutingModule,
+    DashboardRoutingModule,
     HttpClientModule,
     TranslateModule.forChild({
       loader: {
@@ -23,7 +23,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
     })
   ]
 })
-export class ContactsModule { }
+export class DashboardModule { }
 // tslint:disable-next-line:typedef
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
