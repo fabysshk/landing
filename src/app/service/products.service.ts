@@ -18,6 +18,7 @@ export interface Product {
 })
 export class ProductsService {
   public products$ = new BehaviorSubject<Product[]>([]);
+  // tslint:disable-next-line:typedef
   update(product) {
     // console.log(product);
   }

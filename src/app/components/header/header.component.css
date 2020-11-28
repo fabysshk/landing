@@ -1,9 +1,9 @@
-header{
+header {
   background-color: var(--color-main-dark);
   padding: 5px;
   box-shadow: 1px 1px 15px var(--color-main-dark);
 }
-nav{
+nav {
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -11,31 +11,31 @@ nav{
   justify-content: space-between;
   flex-wrap: wrap;
 }
-ul{
+ul {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
-li{
+li {
   padding-right: 10px;
 }
-li:last-child{
+li:last-child {
   padding-right: 0;
 }
-a{
+a {
   color: var(--color-main-ligth);
   padding: 5px;
 }
-a.active{
+a.active {
   color: var(--color-danger);
 }
-img{
+img {
   display: block;
   width: 25px;
   height: 25px;
   background-color: var(--color-danger);
   object-fit: cover;
 }
-select{
+select {
   border-radius: 5px;
 }

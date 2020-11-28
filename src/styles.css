@@ -80,7 +80,7 @@ app-root {
 }
 main,
 app-navbar,
-app-nav-cart{
+app-nav-cart {
   overflow-y: scroll;
 }
 .page {

@@ -35,16 +35,14 @@
         </a>
       </li>
 
-      <ng-container *ngIf="isAuth$ | async;else auth">
+      <ng-container *ngIf="isAuth$ | async; else auth">
         <li>
           <a routerLink="/dashboard" routerLinkActive="active">
             {{ "links.dashboard" | translate }}
           </a>
         </li>
         <li>
-          <button (click)="onLogOut()" class="link">
-            logout
-          </button>
+          <button (click)="onLogOut()" class="link">logout</button>
         </li>
       </ng-container>
       <ng-template #auth>
@@ -54,8 +52,6 @@
           </a>
         </li>
       </ng-template>
-
-
 
       <li>
         <select #langSelect (change)="translate.use(langSelect.value)">

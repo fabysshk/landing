@@ -40,8 +40,9 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () =>
-      import('./pages/dashboard/dashboard.module')
-        .then((m) => m.DashboardModule),
+      import('./pages/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
     data: { animation: 'isRight' },
   },
   {

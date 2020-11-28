@@ -11,11 +11,10 @@ export class AuthComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  // tslint:disable-next-line:typedef
   prepareRoute(outlet: RouterOutlet) {
     return (
-      outlet &&
-      outlet.activatedRouteData &&
-      outlet.activatedRouteData['animation']
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
     );
   }
 }

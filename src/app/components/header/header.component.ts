@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from '../../service/cart.service';
 import { Product } from '../../service/products.service';
-import {Observable} from 'rxjs';
-import {AuthService} from '../../service/auth.service';
+import { Observable } from 'rxjs';
+import { AuthService } from '../../service/auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -23,11 +23,11 @@ export class HeaderComponent implements OnInit {
     this.onAuth();
   }
 
-  private onAuth(): void{
+  private onAuth(): void {
     this.isAuth$ = this.authService.isAuth$;
   }
 
-  public onLogOut(): void{
+  public onLogOut(): void {
     this.authService.logout();
   }
 

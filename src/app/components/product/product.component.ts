@@ -9,7 +9,7 @@ import { CartService } from '../../service/cart.service';
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product;
-  @Input() isCart: boolean = false;
+  @Input() isCart: boolean;
   constructor(
     private cart: CartService,
     private productService: ProductsService
@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
   onRemoveFromCart() {
     this.cart.remove(this.product);
   }
-
+  // tslint:disable-next-line:typedef
   onChange(item) {
     this.product.additing.find((p) => p.id === item.id).check = !item.check;
     this.productService.update(this.product);

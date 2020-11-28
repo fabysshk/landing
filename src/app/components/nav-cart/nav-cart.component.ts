@@ -23,8 +23,7 @@ export class NavCartComponent implements OnInit {
       const sumAdding = prev.additing.reduce((a, p) => {
         return a + (p.check ? p.price : 0);
       }, 0);
-      const sumAll = sumPrice + sumAdding;
-      return sumAll;
+      return sumPrice + sumAdding;
     }, 0);
   }
 }

@@ -26,6 +26,7 @@ import { ComponentsModule } from '../../components/components.module';
   ],
 })
 export class CartModule {}
+// tslint:disable-next-line:typedef
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }

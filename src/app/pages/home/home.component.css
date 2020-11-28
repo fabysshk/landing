@@ -1,18 +1,18 @@
-.products{
-  --count:3;
+.products {
+  --count: 3;
   display: grid;
   grid-template-columns: repeat(var(--count), 1fr);
   padding: 5px;
   background-color: var(--bg-secondary);
 }
 
-@media screen and (max-width: 800px){
-  .products{
+@media screen and (max-width: 800px) {
+  .products {
     --count: 2;
   }
 }
-@media screen and (max-width: 400px){
-  .products{
+@media screen and (max-width: 400px) {
+  .products {
     --count: 1;
   }
 }

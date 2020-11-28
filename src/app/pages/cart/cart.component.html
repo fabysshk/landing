@@ -3,6 +3,10 @@
     {{ "links.cart" | translate }}
   </h1>
   <div *ngIf="products$ | async as products" class="products">
-    <app-product *ngFor="let product of products" [product]="product" [isCart]="true"></app-product>
+    <app-product
+      *ngFor="let product of products"
+      [product]="product"
+      [isCart]="true"
+    ></app-product>
   </div>
 </section>
