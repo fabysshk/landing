@@ -42,7 +42,9 @@
           </a>
         </li>
         <li>
-          <button (click)="onLogOut()" class="link">logout</button>
+          <button (click)="onLogOut()" class="link">
+            {{ "links.logout" | translate }}
+          </button>
         </li>
       </ng-container>
       <ng-template #auth>

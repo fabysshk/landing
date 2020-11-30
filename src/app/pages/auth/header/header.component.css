@@ -1,0 +1,17 @@
+header {
+  background-color: var(--color-danger-dark);
+  padding: 5px;
+}
+
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+header a {
+  color: var(--color-secondary-dark);
+}
+header a.active {
+  color: var(--color-success-dark);
+}

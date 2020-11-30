@@ -2,3 +2,27 @@ p {
   padding: 5px;
   text-align: right;
 }
+
+form {
+  width: 65%;
+  margin: 0 auto;
+}
+input {
+  width: 100%;
+  padding: 5px;
+}
+
+.hint {
+  background-color: lightslategray;
+  padding: 2px;
+  font-size: 8px;
+  text-align: right;
+}
+.error {
+  display: none;
+  padding: 5px;
+  background-color: lightsalmon;
+}
+.error.show {
+  display: block;
+}
