@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard, NoAuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -36,6 +37,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/auth/auth.module').then((m) => m.AuthModule),
     data: { animation: 'isLeft' },
+    canActivate:[NoAuthGuard]
   },
   {
     path: 'dashboard',
@@ -44,6 +46,7 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
     data: { animation: 'isRight' },
+    canActivate:[AuthGuard]
   },
   {
     path: '**',

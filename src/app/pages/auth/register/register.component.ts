@@ -9,8 +9,8 @@ import { UserAuth } from '../../../interfaces/user-auth';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  email = new FormControl('re@re.re', [Validators.required, Validators.email]);
-  password = new FormControl('rerere', [
+  email = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('', [
     Validators.required,
     Validators.minLength(6),
   ]);
