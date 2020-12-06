@@ -1,0 +1,11 @@
+<div class="task item">
+  <h5>{{ task.description }}</h5>
+  <p>
+    <a
+      class="btn"
+      routerLink="/dashboard/projects/{{ task.project_id }}/tasks/{{ task.id }}"
+    >
+      go
+    </a>
+  </p>
+</div>

@@ -7,9 +7,10 @@ import { DashboardComponent } from './dashboard.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, HeaderComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

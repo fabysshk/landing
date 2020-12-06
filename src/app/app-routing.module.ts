@@ -37,7 +37,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/auth/auth.module').then((m) => m.AuthModule),
     data: { animation: 'isLeft' },
-    canActivate:[NoAuthGuard]
+    canActivate: [NoAuthGuard],
   },
   {
     path: 'dashboard',
@@ -46,7 +46,7 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
     data: { animation: 'isRight' },
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: '**',

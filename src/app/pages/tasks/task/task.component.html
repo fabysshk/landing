@@ -1,0 +1,17 @@
+<ng-container *ngIf="project$ | async as project; else emptyProject">
+  <h1>
+    project title > {{ project.title }}
+    <a routerLink="/dashboard/projects/{{ project.id }}/tasks" class="btn"
+      >back</a
+    >
+  </h1>
+  <ng-container *ngIf="task$ | async as task; emptyTask">
+    <app-tasks-item [task]="task"></app-tasks-item>
+  </ng-container>
+  <ng-template #emptyTask>
+    <h3>task not found</h3>
+  </ng-template>
+</ng-container>
+<ng-template #emptyProject>
+  <h2>project not found</h2>
+</ng-template>
